@@ -67,7 +67,7 @@ button {
 }
 .arrow-up{
     position: fixed;
-    bottom: 60px;
+    bottom: 120px;
     right: 50px;
     width: 70px;
     height: 70px;
@@ -83,3 +83,23 @@ button {
 .arrow-up.show {
     opacity: 1;
 }
+
+.arrow-down{
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+}
+.arrow-down span {
+    font-size: 50px;
+}
+.arrow-down.show {
+    opacity: 1;
+}
+

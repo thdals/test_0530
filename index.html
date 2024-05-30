@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Document</title>
 </head>
 <body>
@@ -68,7 +69,12 @@
         <span class="material-symbols-outlined">
             arrow_upward
         </span>
-    </button>   
+    </button>
+    <button class="arrow-down">
+        <span class="material-symbols-outlined">
+            arrow_downward
+        </span>
+    </button>
 
     <script>
         
@@ -104,6 +110,19 @@
         arrowUp.addEventListener('click', function() {
             sectionHome.scrollIntoView({behavior:"smooth", block:"center"});
         });
+
+        const arrowDown = document.querySelector('.arrow-down');
+        document.addEventListener('scroll', function() {
+            if (window.scrollY < 4000) {
+                arrowDown.classList.add('show');
+            } else {
+                arrowDown.classList.remove('show');
+            }
+        })
+        arrowDown.addEventListener('click', function() {
+            sectionContact.scrollIntoView({behavior:"smooth", block:"center"});
+        });
+
 
     </script>
 
